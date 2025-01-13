@@ -73,7 +73,7 @@ CREATE TABLE `Categories` (
 
 LOCK TABLES `Categories` WRITE;
 /*!40000 ALTER TABLE `Categories` DISABLE KEYS */;
-INSERT INTO `Categories` VALUES (1,'Italian','2025-01-10 12:56:11','2025-01-10 12:56:11'),(2,'French','2025-01-10 12:56:11','2025-01-10 12:56:11'),(3,'Spanish','2025-01-10 12:56:11','2025-01-10 12:56:11'),(4,'Japanese','2025-01-10 12:56:11','2025-01-10 12:56:11'),(5,'Chinese','2025-01-10 12:56:11','2025-01-10 12:56:11'),(6,'Mexican','2025-01-10 12:56:11','2025-01-10 12:56:11'),(7,'Indian','2025-01-10 12:56:11','2025-01-10 12:56:11'),(8,'Greek','2025-01-10 12:56:11','2025-01-10 12:56:11'),(9,'Ukrainian','2025-01-10 12:56:11','2025-01-10 12:56:11'),(10,'Turkish','2025-01-10 12:56:11','2025-01-10 12:56:11'),(11,'Korean','2025-01-10 12:56:11','2025-01-10 12:56:11'),(12,'American','2025-01-10 12:56:12','2025-01-10 12:56:12');
+INSERT INTO `Categories` VALUES (1,'Italian','2025-01-12 18:28:04','2025-01-12 18:28:04'),(2,'French','2025-01-12 18:28:04','2025-01-12 18:28:04'),(3,'Spanish','2025-01-12 18:28:04','2025-01-12 18:28:04'),(4,'Japanese','2025-01-12 18:28:04','2025-01-12 18:28:04'),(5,'Chinese','2025-01-12 18:28:04','2025-01-12 18:28:04'),(6,'Mexican','2025-01-12 18:28:04','2025-01-12 18:28:04'),(7,'Indian','2025-01-12 18:28:04','2025-01-12 18:28:04'),(8,'Greek','2025-01-12 18:28:04','2025-01-12 18:28:04'),(9,'Ukrainian','2025-01-12 18:28:04','2025-01-12 18:28:04'),(10,'Turkish','2025-01-12 18:28:04','2025-01-12 18:28:04'),(11,'Korean','2025-01-12 18:28:04','2025-01-12 18:28:04'),(12,'American','2025-01-12 18:28:05','2025-01-12 18:28:05');
 /*!40000 ALTER TABLE `Categories` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -101,7 +101,7 @@ CREATE TABLE `Cuisines` (
 
 LOCK TABLES `Cuisines` WRITE;
 /*!40000 ALTER TABLE `Cuisines` DISABLE KEYS */;
-INSERT INTO `Cuisines` VALUES (1,'Breakfast','2025-01-10 12:56:12','2025-01-10 12:56:12'),(2,'Main Courses','2025-01-10 12:56:12','2025-01-10 12:56:12'),(3,'Snacks','2025-01-10 12:56:12','2025-01-10 12:56:12'),(4,'Desserts','2025-01-10 12:56:12','2025-01-10 12:56:12'),(5,'Salads','2025-01-10 12:56:12','2025-01-10 12:56:12'),(6,'Vegan Dishes','2025-01-10 12:56:12','2025-01-10 12:56:12'),(7,'Drinks','2025-01-10 12:56:12','2025-01-10 12:56:12');
+INSERT INTO `Cuisines` VALUES (1,'Breakfast','2025-01-12 18:28:05','2025-01-12 18:28:05'),(2,'Main Courses','2025-01-12 18:28:05','2025-01-12 18:28:05'),(3,'Snacks','2025-01-12 18:28:05','2025-01-12 18:28:05'),(4,'Desserts','2025-01-12 18:28:05','2025-01-12 18:28:05'),(5,'Salads','2025-01-12 18:28:05','2025-01-12 18:28:05'),(6,'Vegan Dishes','2025-01-12 18:28:05','2025-01-12 18:28:05'),(7,'Drinks','2025-01-12 18:28:05','2025-01-12 18:28:05');
 /*!40000 ALTER TABLE `Cuisines` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -398,7 +398,7 @@ CREATE TABLE `Users` (
   UNIQUE KEY `email` (`email`),
   UNIQUE KEY `username_2` (`username`),
   UNIQUE KEY `email_2` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -407,7 +407,6 @@ CREATE TABLE `Users` (
 
 LOCK TABLES `Users` WRITE;
 /*!40000 ALTER TABLE `Users` DISABLE KEYS */;
-INSERT INTO `Users` VALUES (1,'new_user','new_user@example.com','$2b$10$vPtx4.jVWCj1/dFm4eldVuZ3XWOO6hz0.O4u84IRBU8eelYb3936q',NULL,NULL,'2025-01-10 13:25:32','2025-01-10 13:25:32'),(2,'test_user','test@example.com','$2b$10$VfmUIZ0F0bV0hhTq1b3JrORZo0jgKbh0PHON3UlUbVHSjmJ.lBU8a',NULL,NULL,'2025-01-10 13:29:58','2025-01-10 13:29:58'),(3,'duplicate_user','duplicate@example.com','$2b$10$4hvrCxKyYxRjNw4Z2SC1zeF60hxN4v30/4UJAlyD/f8PjeScEwybi',NULL,NULL,'2025-01-10 13:31:26','2025-01-10 13:31:26'),(4,'very_long_username_sedrtfyuikjhgyftghwcjjhwhjkcwjshviqjeofncwoiwjoijwoejoenhcoeoicj','testt@example.com','$2b$10$H0F0uNNKPPbEur/3UAgtS.DgnwG5JsVFdWfLgkq4xhGHJ13HrCiri',NULL,NULL,'2025-01-10 13:32:45','2025-01-10 13:32:45'),(5,'very_long_username_sedrtaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafyuikjhgyftghwcjjhwhjkcwjshviqjeofncwoiwjoijwoejoenhcoeoicj','testtt@example.com','$2b$10$hlUn0asxyo3mk4C6yUgmseIODC5vaCMQdaTx./ay.LqZmqpi0oZp2',NULL,NULL,'2025-01-10 13:33:05','2025-01-10 13:33:05'),(6,'teest_user','teestttt_user@example.com','$2b$10$oQuLnfEs6w/FejFWoFhTEu3.pgERtPd6rdPBbW4/HPjMCG8ZgVbte',NULL,NULL,'2025-01-10 13:45:31','2025-01-10 13:45:31'),(7,'teesstt_user','teesstttt_user@example.com','$2b$10$qZWMD5lijkZZAGIwixLqUeoftZkumaXkTKzFeW63HdEZ16x5i7Qx2',NULL,NULL,'2025-01-10 13:52:54','2025-01-10 13:52:54'),(8,'tteesstt_user','tteesstttt_user@example.com','$2b$10$qZEU6tUfT2dLyXA7ass/9usL.6/8nyjHhaX1B.dXcVk6ovTG087nG',NULL,NULL,'2025-01-10 13:52:54','2025-01-10 13:52:54'),(9,'user1','user1@example.com','$2b$10$VWLSCIfkxKTD5Gm8Ty6DpOIjAD6roNgrtCav3czH6OllV5XzNOJaO',NULL,NULL,'2025-01-10 14:00:26','2025-01-10 14:00:26'),(10,'user2','user2@example.com','$2b$10$Darpjg/7Wsa.tvSzD7anIubqajItxNSpvILtu6h5H062hpgW1m64a',NULL,NULL,'2025-01-10 14:00:26','2025-01-10 14:00:26'),(11,'user3','user3@example.com','$2b$10$ZygUgp/w9tSQ3xFd8dYry.sXsrxVJ3dV8Q6yfJRLqfZBu/s1w1iKq',NULL,NULL,'2025-01-10 14:00:27','2025-01-10 14:00:27'),(12,'user4','user4@example.com','$2b$10$QmoXD1wA8YTciPEa4bucue4UGZrXDc7mGIEkzHi/xeXZ0OUI8Mf7G',NULL,NULL,'2025-01-10 14:00:27','2025-01-10 14:00:27'),(13,'user5','user5@example.com','$2b$10$xbVHGtHXeqPwWp58MvkFKuzT6zl13XZoUHoYB2JuK1uRJhuYJVzFy',NULL,NULL,'2025-01-10 14:00:27','2025-01-10 14:00:27'),(14,'user6','user6@example.com','$2b$10$ZCL6rC/VVQaqMXvlLxLikulJtxTxeTKaBmNyfUUV1/lAuna4HuiWG',NULL,NULL,'2025-01-10 14:56:27','2025-01-10 15:49:39');
 /*!40000 ALTER TABLE `Users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -420,4 +419,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-01-12  3:00:01
+-- Dump completed on 2025-01-13  3:00:02
