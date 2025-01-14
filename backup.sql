@@ -34,9 +34,9 @@ CREATE TABLE `ActivityHistory` (
   KEY `user_id` (`user_id`),
   KEY `recipe_id` (`recipe_id`),
   KEY `saved_recipe_id` (`saved_recipe_id`),
-  CONSTRAINT `ActivityHistory_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `Users` (`user_id`) ON DELETE CASCADE,
-  CONSTRAINT `ActivityHistory_ibfk_2` FOREIGN KEY (`recipe_id`) REFERENCES `Recipes` (`recipe_id`) ON DELETE SET NULL,
-  CONSTRAINT `ActivityHistory_ibfk_3` FOREIGN KEY (`saved_recipe_id`) REFERENCES `UserSavedRecipes` (`user_saved_id`) ON DELETE SET NULL
+  CONSTRAINT `ActivityHistory_ibfk_16` FOREIGN KEY (`user_id`) REFERENCES `Users` (`user_id`) ON DELETE CASCADE,
+  CONSTRAINT `ActivityHistory_ibfk_17` FOREIGN KEY (`recipe_id`) REFERENCES `Recipes` (`recipe_id`) ON DELETE SET NULL,
+  CONSTRAINT `ActivityHistory_ibfk_18` FOREIGN KEY (`saved_recipe_id`) REFERENCES `UserSavedRecipes` (`user_saved_id`) ON DELETE SET NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -63,7 +63,12 @@ CREATE TABLE `Categories` (
   `updatedAt` datetime NOT NULL,
   PRIMARY KEY (`category_id`),
   UNIQUE KEY `name` (`name`),
-  UNIQUE KEY `name_2` (`name`)
+  UNIQUE KEY `name_2` (`name`),
+  UNIQUE KEY `name_3` (`name`),
+  UNIQUE KEY `name_4` (`name`),
+  UNIQUE KEY `name_5` (`name`),
+  UNIQUE KEY `name_6` (`name`),
+  UNIQUE KEY `name_7` (`name`)
 ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -73,7 +78,7 @@ CREATE TABLE `Categories` (
 
 LOCK TABLES `Categories` WRITE;
 /*!40000 ALTER TABLE `Categories` DISABLE KEYS */;
-INSERT INTO `Categories` VALUES (1,'Italian','2025-01-12 18:28:04','2025-01-12 18:28:04'),(2,'French','2025-01-12 18:28:04','2025-01-12 18:28:04'),(3,'Spanish','2025-01-12 18:28:04','2025-01-12 18:28:04'),(4,'Japanese','2025-01-12 18:28:04','2025-01-12 18:28:04'),(5,'Chinese','2025-01-12 18:28:04','2025-01-12 18:28:04'),(6,'Mexican','2025-01-12 18:28:04','2025-01-12 18:28:04'),(7,'Indian','2025-01-12 18:28:04','2025-01-12 18:28:04'),(8,'Greek','2025-01-12 18:28:04','2025-01-12 18:28:04'),(9,'Ukrainian','2025-01-12 18:28:04','2025-01-12 18:28:04'),(10,'Turkish','2025-01-12 18:28:04','2025-01-12 18:28:04'),(11,'Korean','2025-01-12 18:28:04','2025-01-12 18:28:04'),(12,'American','2025-01-12 18:28:05','2025-01-12 18:28:05');
+INSERT INTO `Categories` VALUES (1,'Italian','2025-01-14 01:33:30','2025-01-14 01:33:30'),(2,'French','2025-01-14 01:33:31','2025-01-14 01:33:31'),(3,'Spanish','2025-01-14 01:33:31','2025-01-14 01:33:31'),(4,'Japanese','2025-01-14 01:33:31','2025-01-14 01:33:31'),(5,'Chinese','2025-01-14 01:33:31','2025-01-14 01:33:31'),(6,'Mexican','2025-01-14 01:33:31','2025-01-14 01:33:31'),(7,'Indian','2025-01-14 01:33:31','2025-01-14 01:33:31'),(8,'Greek','2025-01-14 01:33:31','2025-01-14 01:33:31'),(9,'Ukrainian','2025-01-14 01:33:31','2025-01-14 01:33:31'),(10,'Turkish','2025-01-14 01:33:31','2025-01-14 01:33:31'),(11,'Korean','2025-01-14 01:33:31','2025-01-14 01:33:31'),(12,'American','2025-01-14 01:33:31','2025-01-14 01:33:31');
 /*!40000 ALTER TABLE `Categories` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -91,7 +96,12 @@ CREATE TABLE `Cuisines` (
   `updatedAt` datetime NOT NULL,
   PRIMARY KEY (`cuisine_id`),
   UNIQUE KEY `name` (`name`),
-  UNIQUE KEY `name_2` (`name`)
+  UNIQUE KEY `name_2` (`name`),
+  UNIQUE KEY `name_3` (`name`),
+  UNIQUE KEY `name_4` (`name`),
+  UNIQUE KEY `name_5` (`name`),
+  UNIQUE KEY `name_6` (`name`),
+  UNIQUE KEY `name_7` (`name`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -101,7 +111,7 @@ CREATE TABLE `Cuisines` (
 
 LOCK TABLES `Cuisines` WRITE;
 /*!40000 ALTER TABLE `Cuisines` DISABLE KEYS */;
-INSERT INTO `Cuisines` VALUES (1,'Breakfast','2025-01-12 18:28:05','2025-01-12 18:28:05'),(2,'Main Courses','2025-01-12 18:28:05','2025-01-12 18:28:05'),(3,'Snacks','2025-01-12 18:28:05','2025-01-12 18:28:05'),(4,'Desserts','2025-01-12 18:28:05','2025-01-12 18:28:05'),(5,'Salads','2025-01-12 18:28:05','2025-01-12 18:28:05'),(6,'Vegan Dishes','2025-01-12 18:28:05','2025-01-12 18:28:05'),(7,'Drinks','2025-01-12 18:28:05','2025-01-12 18:28:05');
+INSERT INTO `Cuisines` VALUES (1,'Breakfast','2025-01-14 01:33:31','2025-01-14 01:33:31'),(2,'Main Courses','2025-01-14 01:33:31','2025-01-14 01:33:31'),(3,'Snacks','2025-01-14 01:33:31','2025-01-14 01:33:31'),(4,'Desserts','2025-01-14 01:33:31','2025-01-14 01:33:31'),(5,'Salads','2025-01-14 01:33:31','2025-01-14 01:33:31'),(6,'Vegan Dishes','2025-01-14 01:33:31','2025-01-14 01:33:31'),(7,'Drinks','2025-01-14 01:33:31','2025-01-14 01:33:31');
 /*!40000 ALTER TABLE `Cuisines` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -180,8 +190,8 @@ CREATE TABLE `RecipeIngredients` (
   PRIMARY KEY (`recipe_ingredient_id`),
   UNIQUE KEY `RecipeIngredients_ingredient_id_recipe_id_unique` (`recipe_id`,`ingredient_id`),
   KEY `ingredient_id` (`ingredient_id`),
-  CONSTRAINT `RecipeIngredients_ibfk_1` FOREIGN KEY (`recipe_id`) REFERENCES `Recipes` (`recipe_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `RecipeIngredients_ibfk_2` FOREIGN KEY (`ingredient_id`) REFERENCES `Ingredients` (`ingredient_id`) ON DELETE CASCADE ON UPDATE CASCADE
+  CONSTRAINT `RecipeIngredients_ibfk_11` FOREIGN KEY (`recipe_id`) REFERENCES `Recipes` (`recipe_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `RecipeIngredients_ibfk_12` FOREIGN KEY (`ingredient_id`) REFERENCES `Ingredients` (`ingredient_id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -258,23 +268,24 @@ DROP TABLE IF EXISTS `Recipes`;
 CREATE TABLE `Recipes` (
   `recipe_id` int NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
-  `description` varchar(255) NOT NULL,
+  `description` varchar(255) DEFAULT NULL,
   `cuisine_id` int NOT NULL,
   `category_id` int NOT NULL,
-  `preparation_time` int NOT NULL,
-  `cooking_time` int NOT NULL,
-  `total_time` int NOT NULL,
-  `difficulty` enum('easy','medium','hard') NOT NULL,
-  `servings` int NOT NULL,
+  `preparation_time` int DEFAULT NULL,
+  `cooking_time` int DEFAULT NULL,
+  `total_time` int DEFAULT NULL,
+  `difficulty` enum('easy','medium','hard') DEFAULT NULL,
+  `servings` int DEFAULT NULL,
   `location_map` varchar(255) DEFAULT NULL,
+  `image_url` varchar(255) DEFAULT NULL,
   `createdAt` datetime NOT NULL,
   `updatedAt` datetime NOT NULL,
   PRIMARY KEY (`recipe_id`),
   KEY `cuisine_id` (`cuisine_id`),
   KEY `category_id` (`category_id`),
-  CONSTRAINT `Recipes_ibfk_1` FOREIGN KEY (`cuisine_id`) REFERENCES `Cuisines` (`cuisine_id`),
-  CONSTRAINT `Recipes_ibfk_2` FOREIGN KEY (`category_id`) REFERENCES `Categories` (`category_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  CONSTRAINT `Recipes_ibfk_11` FOREIGN KEY (`cuisine_id`) REFERENCES `Cuisines` (`cuisine_id`),
+  CONSTRAINT `Recipes_ibfk_12` FOREIGN KEY (`category_id`) REFERENCES `Categories` (`category_id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -283,6 +294,7 @@ CREATE TABLE `Recipes` (
 
 LOCK TABLES `Recipes` WRITE;
 /*!40000 ALTER TABLE `Recipes` DISABLE KEYS */;
+INSERT INTO `Recipes` VALUES (1,'Bruschetta',NULL,1,1,NULL,NULL,NULL,NULL,NULL,NULL,'/img/recipes/Bruschetta.jpg','2025-01-14 02:36:34','2025-01-14 02:36:34'),(2,'Focaccia',NULL,1,1,NULL,NULL,NULL,NULL,NULL,NULL,'/img/recipes/Focaccia.jpg','2025-01-14 02:36:34','2025-01-14 02:36:34'),(3,'Granola with Yogurt',NULL,1,1,NULL,NULL,NULL,NULL,NULL,NULL,'/img/recipes/Granola-with-Yogurt.jpg','2025-01-14 02:36:34','2025-01-14 02:36:34'),(4,'Cornetto',NULL,1,1,NULL,NULL,NULL,NULL,NULL,NULL,'/img/recipes/Cornetto.jpg','2025-01-14 02:36:34','2025-01-14 02:36:34'),(5,'Crostino',NULL,1,1,NULL,NULL,NULL,NULL,NULL,NULL,'/img/recipes/Crostino.jpg','2025-01-14 02:36:34','2025-01-14 02:36:34'),(6,'Fetta Bruschetta',NULL,1,1,NULL,NULL,NULL,NULL,NULL,NULL,'/img/recipes/Fetta-Bruschetta.jpg','2025-01-14 02:36:34','2025-01-14 02:36:34'),(7,'Cannelloni',NULL,2,1,NULL,NULL,NULL,NULL,NULL,NULL,'/img/recipes/Cannelloni.jpg','2025-01-14 02:36:34','2025-01-14 02:36:34'),(8,'Pasta with Pesto',NULL,2,1,NULL,NULL,NULL,NULL,NULL,NULL,'/img/recipes/Pasta-with-Pesto.jpg','2025-01-14 02:36:34','2025-01-14 02:36:34'),(9,'Osso Buco',NULL,2,1,NULL,NULL,NULL,NULL,NULL,NULL,'/img/recipes/Osso-buco.jpg','2025-01-14 02:36:34','2025-01-14 02:36:34'),(10,'Lasagna',NULL,2,1,NULL,NULL,NULL,NULL,NULL,NULL,'/img/recipes/Lasagna-Bolognese.jpg','2025-01-14 02:36:34','2025-01-14 02:36:34'),(11,'Pasta Carbonara',NULL,2,1,NULL,NULL,NULL,NULL,NULL,NULL,'/img/recipes/Pasta-Carbonara.jpg','2025-01-14 02:36:34','2025-01-14 02:36:34'),(12,'Margherita Pizza',NULL,2,1,NULL,NULL,NULL,NULL,NULL,NULL,'/img/recipes/Margherita-Pizza.jpg','2025-01-14 02:36:34','2025-01-14 02:36:34'),(13,'Minestrone.jpg',NULL,2,1,NULL,NULL,NULL,NULL,NULL,NULL,'/img/recipes/Minestrone.jpg','2025-01-14 02:36:34','2025-01-14 02:36:34'),(14,'Arancini',NULL,3,1,NULL,NULL,NULL,NULL,NULL,NULL,'/img/recipes/Arancini.webp','2025-01-14 02:36:34','2025-01-14 02:36:34'),(15,'Cherry mousse dessert',NULL,4,1,NULL,NULL,NULL,NULL,NULL,NULL,'/img/recipes/Cherry-mousse-dessert.jpg','2025-01-14 02:36:34','2025-01-14 02:36:34'),(16,'Gelato',NULL,4,1,NULL,NULL,NULL,NULL,NULL,NULL,'/img/recipes/Gelato.jpg','2025-01-14 02:36:34','2025-01-14 02:36:34'),(17,'Tiramisu',NULL,4,1,NULL,NULL,NULL,NULL,NULL,NULL,'/img/recipes/Tiramisu.jpg','2025-01-14 02:36:34','2025-01-14 02:36:34'),(18,'Panettone',NULL,4,1,NULL,NULL,NULL,NULL,NULL,NULL,'/img/recipes/Panettone.jpg','2025-01-14 02:36:34','2025-01-14 02:36:34'),(19,'Yogurt Cake',NULL,4,1,NULL,NULL,NULL,NULL,NULL,NULL,'/img/recipes/Yogurt-Cake.jpg','2025-01-14 02:36:34','2025-01-14 02:36:34'),(20,'Fruit Salad',NULL,4,1,NULL,NULL,NULL,NULL,NULL,NULL,'/img/recipes/Fruit-Salad.jpg','2025-01-14 02:36:34','2025-01-14 02:36:34'),(21,'Caprese Salad',NULL,5,1,NULL,NULL,NULL,NULL,NULL,NULL,'/img/recipes/Caprese-Salad.jpg','2025-01-14 02:36:34','2025-01-14 02:36:34'),(22,'Polenta',NULL,2,1,NULL,NULL,NULL,NULL,NULL,NULL,'/img/recipes/Polenta.jpg','2025-01-14 02:36:34','2025-01-14 02:36:34'),(23,'Mushroom Risotto',NULL,6,1,NULL,NULL,NULL,NULL,NULL,NULL,'/img/recipes/Mushroom-risotto.jpg','2025-01-14 02:36:34','2025-01-14 02:36:34'),(24,'Cappuccino with Brioche',NULL,7,1,NULL,NULL,NULL,NULL,NULL,NULL,'/img/recipes/Cappuccino-with-Brioche.jpg','2025-01-14 02:36:34','2025-01-14 02:36:34');
 /*!40000 ALTER TABLE `Recipes` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -305,8 +317,8 @@ CREATE TABLE `Reviews` (
   PRIMARY KEY (`review_id`),
   KEY `recipe_id` (`recipe_id`),
   KEY `user_id` (`user_id`),
-  CONSTRAINT `Reviews_ibfk_1` FOREIGN KEY (`recipe_id`) REFERENCES `Recipes` (`recipe_id`) ON DELETE CASCADE,
-  CONSTRAINT `Reviews_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `Users` (`user_id`) ON DELETE CASCADE
+  CONSTRAINT `Reviews_ibfk_11` FOREIGN KEY (`recipe_id`) REFERENCES `Recipes` (`recipe_id`) ON DELETE CASCADE,
+  CONSTRAINT `Reviews_ibfk_12` FOREIGN KEY (`user_id`) REFERENCES `Users` (`user_id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -363,8 +375,8 @@ CREATE TABLE `UserSavedRecipes` (
   PRIMARY KEY (`user_saved_id`),
   KEY `user_id` (`user_id`),
   KEY `recipe_id` (`recipe_id`),
-  CONSTRAINT `UserSavedRecipes_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `Users` (`user_id`) ON DELETE CASCADE,
-  CONSTRAINT `UserSavedRecipes_ibfk_2` FOREIGN KEY (`recipe_id`) REFERENCES `Recipes` (`recipe_id`) ON DELETE CASCADE
+  CONSTRAINT `UserSavedRecipes_ibfk_11` FOREIGN KEY (`user_id`) REFERENCES `Users` (`user_id`) ON DELETE CASCADE,
+  CONSTRAINT `UserSavedRecipes_ibfk_12` FOREIGN KEY (`recipe_id`) REFERENCES `Recipes` (`recipe_id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -397,7 +409,17 @@ CREATE TABLE `Users` (
   UNIQUE KEY `username` (`username`),
   UNIQUE KEY `email` (`email`),
   UNIQUE KEY `username_2` (`username`),
-  UNIQUE KEY `email_2` (`email`)
+  UNIQUE KEY `email_2` (`email`),
+  UNIQUE KEY `username_3` (`username`),
+  UNIQUE KEY `email_3` (`email`),
+  UNIQUE KEY `username_4` (`username`),
+  UNIQUE KEY `email_4` (`email`),
+  UNIQUE KEY `username_5` (`username`),
+  UNIQUE KEY `email_5` (`email`),
+  UNIQUE KEY `username_6` (`username`),
+  UNIQUE KEY `email_6` (`email`),
+  UNIQUE KEY `username_7` (`username`),
+  UNIQUE KEY `email_7` (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -419,4 +441,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-01-13  3:00:02
+-- Dump completed on 2025-01-14  3:00:01
