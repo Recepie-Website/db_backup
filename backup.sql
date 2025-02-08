@@ -34,9 +34,9 @@ CREATE TABLE `ActivityHistory` (
   KEY `user_id` (`user_id`),
   KEY `recipe_id` (`recipe_id`),
   KEY `saved_recipe_id` (`saved_recipe_id`),
-  CONSTRAINT `ActivityHistory_ibfk_19` FOREIGN KEY (`user_id`) REFERENCES `Users` (`user_id`) ON DELETE CASCADE,
-  CONSTRAINT `ActivityHistory_ibfk_20` FOREIGN KEY (`recipe_id`) REFERENCES `Recipes` (`recipe_id`) ON DELETE SET NULL,
-  CONSTRAINT `ActivityHistory_ibfk_21` FOREIGN KEY (`saved_recipe_id`) REFERENCES `UserSavedRecipes` (`user_saved_id`) ON DELETE SET NULL
+  CONSTRAINT `ActivityHistory_ibfk_22` FOREIGN KEY (`user_id`) REFERENCES `Users` (`user_id`) ON DELETE CASCADE,
+  CONSTRAINT `ActivityHistory_ibfk_23` FOREIGN KEY (`recipe_id`) REFERENCES `Recipes` (`recipe_id`) ON DELETE SET NULL,
+  CONSTRAINT `ActivityHistory_ibfk_24` FOREIGN KEY (`saved_recipe_id`) REFERENCES `UserSavedRecipes` (`user_saved_id`) ON DELETE SET NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -69,7 +69,8 @@ CREATE TABLE `Categories` (
   UNIQUE KEY `name_5` (`name`),
   UNIQUE KEY `name_6` (`name`),
   UNIQUE KEY `name_7` (`name`),
-  UNIQUE KEY `name_8` (`name`)
+  UNIQUE KEY `name_8` (`name`),
+  UNIQUE KEY `name_9` (`name`)
 ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -103,7 +104,8 @@ CREATE TABLE `Cuisines` (
   UNIQUE KEY `name_5` (`name`),
   UNIQUE KEY `name_6` (`name`),
   UNIQUE KEY `name_7` (`name`),
-  UNIQUE KEY `name_8` (`name`)
+  UNIQUE KEY `name_8` (`name`),
+  UNIQUE KEY `name_9` (`name`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -192,8 +194,8 @@ CREATE TABLE `RecipeIngredients` (
   PRIMARY KEY (`recipe_ingredient_id`),
   UNIQUE KEY `RecipeIngredients_ingredient_id_recipe_id_unique` (`recipe_id`,`ingredient_id`),
   KEY `ingredient_id` (`ingredient_id`),
-  CONSTRAINT `RecipeIngredients_ibfk_13` FOREIGN KEY (`recipe_id`) REFERENCES `Recipes` (`recipe_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `RecipeIngredients_ibfk_14` FOREIGN KEY (`ingredient_id`) REFERENCES `Ingredients` (`ingredient_id`) ON DELETE CASCADE ON UPDATE CASCADE
+  CONSTRAINT `RecipeIngredients_ibfk_15` FOREIGN KEY (`recipe_id`) REFERENCES `Recipes` (`recipe_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `RecipeIngredients_ibfk_16` FOREIGN KEY (`ingredient_id`) REFERENCES `Ingredients` (`ingredient_id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -285,8 +287,8 @@ CREATE TABLE `Recipes` (
   PRIMARY KEY (`recipe_id`),
   KEY `cuisine_id` (`cuisine_id`),
   KEY `category_id` (`category_id`),
-  CONSTRAINT `Recipes_ibfk_13` FOREIGN KEY (`cuisine_id`) REFERENCES `Cuisines` (`cuisine_id`),
-  CONSTRAINT `Recipes_ibfk_14` FOREIGN KEY (`category_id`) REFERENCES `Categories` (`category_id`) ON DELETE CASCADE ON UPDATE CASCADE
+  CONSTRAINT `Recipes_ibfk_15` FOREIGN KEY (`cuisine_id`) REFERENCES `Cuisines` (`cuisine_id`),
+  CONSTRAINT `Recipes_ibfk_16` FOREIGN KEY (`category_id`) REFERENCES `Categories` (`category_id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -319,8 +321,8 @@ CREATE TABLE `Reviews` (
   PRIMARY KEY (`review_id`),
   KEY `recipe_id` (`recipe_id`),
   KEY `user_id` (`user_id`),
-  CONSTRAINT `Reviews_ibfk_13` FOREIGN KEY (`recipe_id`) REFERENCES `Recipes` (`recipe_id`) ON DELETE CASCADE,
-  CONSTRAINT `Reviews_ibfk_14` FOREIGN KEY (`user_id`) REFERENCES `Users` (`user_id`) ON DELETE CASCADE
+  CONSTRAINT `Reviews_ibfk_15` FOREIGN KEY (`recipe_id`) REFERENCES `Recipes` (`recipe_id`) ON DELETE CASCADE,
+  CONSTRAINT `Reviews_ibfk_16` FOREIGN KEY (`user_id`) REFERENCES `Users` (`user_id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -377,8 +379,8 @@ CREATE TABLE `UserSavedRecipes` (
   PRIMARY KEY (`user_saved_id`),
   KEY `user_id` (`user_id`),
   KEY `recipe_id` (`recipe_id`),
-  CONSTRAINT `UserSavedRecipes_ibfk_13` FOREIGN KEY (`user_id`) REFERENCES `Users` (`user_id`) ON DELETE CASCADE,
-  CONSTRAINT `UserSavedRecipes_ibfk_14` FOREIGN KEY (`recipe_id`) REFERENCES `Recipes` (`recipe_id`) ON DELETE CASCADE
+  CONSTRAINT `UserSavedRecipes_ibfk_15` FOREIGN KEY (`user_id`) REFERENCES `Users` (`user_id`) ON DELETE CASCADE,
+  CONSTRAINT `UserSavedRecipes_ibfk_16` FOREIGN KEY (`recipe_id`) REFERENCES `Recipes` (`recipe_id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -423,7 +425,9 @@ CREATE TABLE `Users` (
   UNIQUE KEY `username_7` (`username`),
   UNIQUE KEY `email_7` (`email`),
   UNIQUE KEY `username_8` (`username`),
-  UNIQUE KEY `email_8` (`email`)
+  UNIQUE KEY `email_8` (`email`),
+  UNIQUE KEY `username_9` (`username`),
+  UNIQUE KEY `email_9` (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -445,4 +449,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-02-07  3:00:01
+-- Dump completed on 2025-02-08  3:00:02
